@@ -6,15 +6,14 @@ class Task {
   final DateTime createdAt;
   final DateTime? updatedAt;
 
-
   const Task({
     required this.id,
     required this.title,
     this.description,
     this.isDone = false,
     required this.createdAt,
-    this.updatedAt
-  })
+    this.updatedAt,
+  });
 
   Task copyWith({
     String? id,
@@ -30,7 +29,7 @@ class Task {
       description: description ?? this.description,
       isDone: isDone ?? this.isDone,
       createdAt: createdAt ?? this.createdAt,
-      updatedAt: updatedAt ?? this.updatedAt
+      updatedAt: updatedAt ?? this.updatedAt,
     );
   }
 }
