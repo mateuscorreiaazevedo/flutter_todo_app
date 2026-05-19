@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_app/features/tasks/domain/task_provider.dart';
 import 'package:todo_app/features/tasks/presentation/widgets/add_task_sheet.dart';
+import 'package:todo_app/features/tasks/presentation/widgets/task_item.dart';
+
+
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -21,11 +24,7 @@ class HomeScreen extends ConsumerWidget {
                 itemCount: tasks.length,
                 itemBuilder: (context, index) {
                   final task = tasks[index];
-                  return ListTile(
-                    title: Text(task.title),
-                    subtitle: Text(task.description ?? ''),
-                    leading: Checkbox(value: task.isDone, onChanged: (_) {}),
-                  );
+                  return TaskItem(task: task);
                 },
               ),
       ),

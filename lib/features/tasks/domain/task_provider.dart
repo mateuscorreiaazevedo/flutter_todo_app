@@ -6,6 +6,7 @@ import 'package:todo_app/features/tasks/domain/task.dart';
 import 'package:todo_app/features/tasks/domain/task_repository.dart';
 
 final taskRepositoryProvider = Provider<TaskRepository>((ref) {
+  ref.keepAlive();
   return LocalTaskRepository();
 });
 

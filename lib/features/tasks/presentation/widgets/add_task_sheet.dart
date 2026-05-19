@@ -1,3 +1,4 @@
+import 'package:todo_app/core/theme/app_theme.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -76,7 +77,16 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
           const SizedBox(height: 16),
           SizedBox(
             width: double.infinity,
-            child: ElevatedButton(onPressed: _submit, child: Text('Adicionar')),
+            child: ElevatedButton(
+              onPressed: _submit,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppTheme.secondary,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: Text('Adicionar'),
+            ),
           ),
         ],
       ),
