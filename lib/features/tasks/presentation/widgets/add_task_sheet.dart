@@ -49,7 +49,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
         left: 16,
         right: 16,
         top: 16,
-        bottom: MediaQuery.of(context).viewInsets.bottom + 16,
+        bottom: MediaQuery.of(context).viewInsets.bottom + 24,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -82,7 +82,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppTheme.secondary,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
               child: Text('Adicionar'),

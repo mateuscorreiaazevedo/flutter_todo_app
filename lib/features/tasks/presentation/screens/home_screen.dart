@@ -4,8 +4,6 @@ import 'package:todo_app/features/tasks/domain/task_provider.dart';
 import 'package:todo_app/features/tasks/presentation/widgets/add_task_sheet.dart';
 import 'package:todo_app/features/tasks/presentation/widgets/task_item.dart';
 
-
-
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
